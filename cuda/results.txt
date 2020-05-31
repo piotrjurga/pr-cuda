@@ -1,0 +1,88 @@
+GPU: "GeForce GTX 970" with compute capability 5.2
+MatrixA(1024,1024), MatrixB(1024,1024)
+
+wersje:
+v0 - wersja oryginalna bez zrównoleglenia pobierania i obliczeń
+v1 - równoległe obliczenia i pobieranie do rejestrów (obliczenia jako pierwsze w kodzie)
+v2 - równoległe obliczenia i pobieranie do rejestrów (pobieranie jako pierwsze w kodzie)
+v3 - równoległe obliczenia i pobieranie do pamięci współdzielonej (obliczenia jako pierwsze w kodzie)
+v4 - równoległe obliczenia i pobieranie do pamięci współdzielonej (pobieranie jako pierwsze w kodzie)
+
+wyniki:
+
+v0 32x32
+Performance= 574.99 GFlop/s, Time= 3.735 msec, Size= 2147483648 Ops, WorkgroupSize= 1024 threads/block
+registers used per thread 30
+shared memory per block   8 KiB
+
+v1 32x32
+Performance= 633.54 GFlop/s, Time= 3.390 msec, Size= 2147483648 Ops, WorkgroupSize= 1024 threads/block
+registers used per thread 31
+shared memory per block   8 KiB
+
+v2 32x32
+Performance= 632.70 GFlop/s, Time= 3.394 msec, Size= 2147483648 Ops, WorkgroupSize= 1024 threads/block
+registers used per thread 31
+shared memory per block   8 KiB
+
+v3 32x32
+Performance= 650.86 GFlop/s, Time= 3.299 msec, Size= 2147483648 Ops, WorkgroupSize= 1024 threads/block
+registers used per thread 32
+shared memory per block   16 KiB
+
+v4 32x32
+Performance= 590.15 GFlop/s, Time= 3.639 msec, Size= 2147483648 Ops, WorkgroupSize= 1024 threads/block
+registers used per thread 32
+shared memory per block   16 KiB
+
+
+v0 16x16
+Performance= 518.76 GFlop/s, Time= 4.140 msec, Size= 2147483648 Ops, WorkgroupSize= 256 threads/block
+registers used per thread 30
+shared memory per block   2 KiB
+
+v1 16x16
+Performance= 577.16 GFlop/s, Time= 3.721 msec, Size= 2147483648 Ops, WorkgroupSize= 256 threads/block
+registers used per thread 30
+shared memory per block   2 KiB
+
+v2 16x16
+Performance= 576.82 GFlop/s, Time= 3.723 msec, Size= 2147483648 Ops, WorkgroupSize= 256 threads/block
+registers used per thread 30
+shared memory per block   2 KiB
+
+v3 16x16
+Performance= 615.47 GFlop/s, Time= 3.489 msec, Size= 2147483648 Ops, WorkgroupSize= 256 threads/block
+registers used per thread 32
+shared memory per block   4 KiB
+
+v4 16x16
+Performance= 554.42 GFlop/s, Time= 3.873 msec, Size= 2147483648 Ops, WorkgroupSize= 256 threads/block
+registers used per thread 32
+shared memory per block   4 KiB
+
+
+v0 8x8
+Performance= 447.59 GFlop/s, Time= 4.798 msec, Size= 2147483648 Ops, WorkgroupSize= 64 threads/block
+registers used per thread 30
+shared memory per block   512 B
+
+v1 8x8
+Performance= 461.04 GFlop/s, Time= 4.658 msec, Size= 2147483648 Ops, WorkgroupSize= 64 threads/block
+registers used per thread 30
+shared memory per block   512 B
+
+v2 8x8
+Performance= 463.06 GFlop/s, Time= 4.638 msec, Size= 2147483648 Ops, WorkgroupSize= 64 threads/block
+registers used per thread 30
+shared memory per block   512 B
+
+v3 8x8
+Performance= 482.58 GFlop/s, Time= 4.450 msec, Size= 2147483648 Ops, WorkgroupSize= 64 threads/block
+registers used per thread 32
+shared memory per block   1 KiB
+
+v4 8x8
+Performance= 415.51 GFlop/s, Time= 5.168 msec, Size= 2147483648 Ops, WorkgroupSize= 64 threads/block
+registers used per thread 32
+shared memory per block   1 KiB
